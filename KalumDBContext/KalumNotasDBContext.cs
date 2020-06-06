@@ -13,7 +13,9 @@ namespace KalumNotas.KalumDBContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Alumno>().HasKey( x => new {x.Carne});
+            modelBuilder.Entity<Religion>().HasKey(x => new {x.ReligionId});
         }
         public DbSet<Alumno> Alumnos {get;set;}
+        public DbSet<Religion> Religiones{get;set;}
     }
 }
